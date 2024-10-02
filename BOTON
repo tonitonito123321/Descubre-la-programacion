@@ -1,0 +1,31 @@
+void POSERATON () {
+  print ("X: " + mouseX);
+  println(" Y: " + mouseY);
+}
+ void CONTROL () {
+   if (mousePressed || mouseButton == RIGHTBUTTON)
+     ellipse(mouseX, mouseY, 50,50);
+   
+ }
+
+void anim(){
+  POSERATON(); 
+  CONTROL();
+  BOTON();
+}
+
+void main () {
+  animate(anim);
+}
+
+void BOTON(){
+   background (136,-196,0);
+  //RECTANGuuujuujujULO
+   rect (100,130, 100,100);
+  if (mousePressed);
+  animate(BOTON1);
+} 
+
+void BOTON1() {
+  image("https://www.moncloa.com/wp-content/uploads/2021/09/protagonismo-la-que-se-avecina.jpg", 100, 130, 150,150);
+}
