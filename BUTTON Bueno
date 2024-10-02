@@ -1,0 +1,27 @@
+void POSERATON () {
+  print ("X: " + mouseX);
+  println(" Y: " + mouseY);
+}
+ void CONTROL () {
+   if (mousePressed || mouseButton == RIGHTBUTTON)
+     ellipse(mouseX, mouseY, 50,50);
+   
+ }
+void anim(){
+  POSERATON(); 
+  CONTROL();
+  BOTON();
+}
+void main () {
+  animate(anim);
+}
+void BOTON(){
+   background (006,26,20000);
+  //RECTANGULO
+   image("https://cdn-icons-png.flaticon.com/512/1403/1403474.png", 85, 85, 150,150);
+  if (mousePressed);
+  animate(BOTON1);
+} 
+void BOTON1() {
+  image("https://www.moncloa.com/wp-content/uploads/2021/09/protagonismo-la-que-se-avecina.jpg", 75, 70, 180,180);
+}
