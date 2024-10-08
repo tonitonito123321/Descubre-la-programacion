@@ -1,0 +1,31 @@
+int x= 160;
+int y= 160;
+
+void main () {
+  animate (ejecutar);
+}
+void ejecutar () {
+  player();
+  controles();
+  controles2();
+  controles3();
+}
+void player (){
+background (10,10,10);
+  ellipse(x,y,10,15);
+}
+void controles() {
+  if(keyPressed && key=="up"){
+    print ("JEJE");
+    y = y -1;
+  }}
+void controles2() {
+  if(keyPressed && key=="down"){
+    print ("SATORU");
+    x = x -1;
+  }}
+void controles3() {
+  if(keyPressed && key=="right"){
+    print ("GOJO");
+    x = -x -1;
+  }}
