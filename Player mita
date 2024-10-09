@@ -1,5 +1,6 @@
-int x= 160;
-int y= 160;
+double x= 160;
+double y= 160;
+double velocidad= 5;
 
 void main () {
   animate (ejecutar);
@@ -9,6 +10,7 @@ void ejecutar () {
   controles();
   controles2();
   controles3();
+  controles4();
 }
 void player (){
 background (10,10,10);
@@ -16,16 +18,30 @@ background (10,10,10);
 }
 void controles() {
   if(keyPressed && key=="up"){
-    print ("JEJE");
-    y = y -1;
+    print ("ITA");
+    y = y -velocidad;
+  if (y < 0) {
+  y = 0;}
   }}
 void controles2() {
-  if(keyPressed && key=="down"){
+  if(keyPressed && key=="left"){
     print ("SATORU");
-    x = x -1;
+    x = x -velocidad;
+    if (x < 0) {
+  x = 0;}
   }}
 void controles3() {
   if(keyPressed && key=="right"){
     print ("GOJO");
-    x = -x -1;
+    x = x +velocidad;
+    if (x > 320) {
+  x = 320;}
   }}
+void controles4() {
+  if(keyPressed && key=="down"){
+    print ("GETO");
+    y = y +velocidad; 
+if (y > 312) {
+  y = 312;}
+  }}
+
