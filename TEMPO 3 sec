@@ -1,0 +1,14 @@
+int UWU = second();
+
+void main () {
+  animate(ejecutar);}
+ 
+void ejecutar (){
+  int a = UWU - second();
+  println (a);
+  if(a<=-3){
+    UWU=second();
+    a = UWU - second();
+    background(random(222),random(222),random(222));
+  }
+}
