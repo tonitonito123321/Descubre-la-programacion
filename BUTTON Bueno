@@ -1,14 +1,15 @@
-void POSERATON () {
+void BUTTY () {
   print ("X: " + mouseX);
   println(" Y: " + mouseY);
 }
  void CONTROL () {
    if (mousePressed || mouseButton == RIGHTBUTTON)
      ellipse(mouseX, mouseY, 50,50);
+   animate (BOTON);
    
  }
 void anim(){
-  POSERATON(); 
+  BUTTY(); 
   CONTROL();
   BOTON();
 }
@@ -16,12 +17,17 @@ void main () {
   animate(anim);
 }
 void BOTON(){
-   background (006,26,20000);
+   background(0,44,255);
   //RECTANGULO
-   image("https://cdn-icons-png.flaticon.com/512/1403/1403474.png", 85, 85, 150,150);
+   image("https://www.shutterstock.com/image-vector/retro-arcade-game-machine-screen-600nw-1167058228.jpg", 1, 1, 318, 318);
+  image("https://github.com/tonitonito123321/Descubre-la-programacion/blob/main/JUEGO/IMAGENES/BUTON.png?raw=true", 99, 120, 135, 55);
   if (mousePressed);
-  animate(BOTON1);
+  animate(PAG2);
 } 
-void BOTON1() {
-  image("https://www.moncloa.com/wp-content/uploads/2021/09/protagonismo-la-que-se-avecina.jpg", 75, 70, 180,180);
+void PAG2() { 
+  background(0,44,255);
+  image("https://steamuserimages-a.akamaihd.net/ugc/999144021176676023/3829BCBD323454FB733291CEF92E2485E5A714A4/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false", 1, 1, 318, 318);
+  if (keyPressed && key=="F"){
+    animate(BUTTY);
+  }
 }
