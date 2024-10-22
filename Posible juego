@@ -1,0 +1,70 @@
+double x = 0;
+double y = 230;
+double v = 0;
+boolean disparando = false;
+// Plano enemigo
+int xEnemigo = 160;
+int yEnemigo = 50;
+int vEnemigo = 3;
+//Creo la figura del enemigo
+void enemigo (int x, int y) {
+  noStroke ();
+  strokeWeight (1);
+  fill(18,255,0);
+  rect (x-10,y-2,20,4);
+  fill(255,0,0);
+  rect (x-3,y-5,6,10);
+  stroke(245,84,84);
+  line (x-10, y-8, x-10,y+8);
+  line (x+10,y-8, x+10,y+8);
+}
+//Creo la nave
+void nave (double x, double y, double escala) {
+  int grosorAleron = round (2*escala);
+  //Ala 
+  noStroke ();
+  fill(0,56,255);
+  rect (x-20*escala, y, 40*escala, 10*escala);
+  //Cuerpo
+  fill(235,32,118);
+  noStroke ();
+  ellipse (x,y, 10*escala,40*escala);
+  //Laterales
+  ellipse (x-20*escala, y+5*escala, 5*escala, 20*escala);
+  ellipse (x+20*escala, y+5*escala, 5*escala, 20*escala);
+  //Alerón
+  stroke(255,255,255);
+  strokeWeight (grosorAleron);
+  line (x,y+5*escala, x,y+15*escala);
+}
+//Fondo 
+void dibuja () {
+  background(40,49,50);//Fondo color gris
+  if (mousePressed)  {
+    x = mouseX;
+    y = 230;
+    v = -3;
+   disparando = true;
+  }
+  //Disparando al enemigo
+  y = y + v;
+  xEnemigo = xEnemigo + vEnemigo;
+  if (xEnemigo > 300 || xEnemigo < 20) {
+    vEnemigo = vEnemigo * -1;
+  }
+  if (xEnemigo-10 < x && xEnemigo+10 > x &&
+      yEnemigo-8 < y && yEnemigo+8 > y) {
+    ellipse (xEnemigo, yEnemigo, 50,50);
+  }
+  if (disparando) {
+    noStroke ();
+    fill(16,0,255);
+    ellipse (x,y, 3,10);
+  }
+  nave (mouseX, 250,1);
+  enemigo (xEnemigo, yEnemigo);
+}
+//Final
+void main() {
+  animate (dibuja);
+}
