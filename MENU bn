@@ -2,38 +2,69 @@ void BUTTY () {
   print ("X: " + mouseX);
   println(" Y: " + mouseY);
 }
- void CONTROL () {
+ void CONTROLB1 () {
    if (mousePressed && mouseButton == RIGHTBUTTON){
-     if(mouseX>80 &&mouseX<200)
-       if(mouseY>100 && mouseY<190)
+     if(mouseX>105 &&mouseX<225)
+       if(mouseY>71 && mouseY<120)
      {animate (BOTON);
-     }}
- }
+     }}}
+
+void BOTON(){
+  animate(PAG2);
+} 
+
 void anim(){
   menuPrincipal();
   BUTTY(); 
-  CONTROL();
- // BOTON();
+  CONTROLB1();
+  CONTROLB2();
+  
 }
 void main () {
     
   animate(anim);
 }
-void BOTON(){
-  // background(92,39,0);
-  //RECTANGULO
-  animate(PAG2);
-} 
+ 
 void PAG2() { 
   background(0,44,255);
   image("https://steamuserimages-a.akamaihd.net/ugc/999144021176676023/3829BCBD323454FB733291CEF92E2485E5A714A4/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false", 1, 1, 318, 318);
-  if (keyPressed && key=="F"){
+ if (keyPressed && key=="F"){
     animate(BUTTY);
-  }
+  } 
 }
-
 
 void menuPrincipal(){
   image("https://img.freepik.com/fotos-premium/sala-television-arte-pixeles-casa-antigua-fondo-muebles-antiguos-estilo-retro-juego-8-bits-ai_985124-2146.jpg", 0, 0, 319,319);
-  image("https://e7.pngegg.com/pngimages/79/356/png-clipart-push-button-pixel-art-button-start-text-logo-thumbnail.png", 80,100, 150,90);
+  image("https://github.com/tonitonito123321/Descubre-la-programacion/blob/main/JUEGO/IMAGENES/www.png?raw=true", 102,70, 120,50);
+ image("https://github.com/tonitonito123321/Descubre-la-programacion/blob/main/JUEGO/IMAGENES/setin.png?raw=true", 102,135, 120,50);
+
+}
+
+void CONTROLB2 () {
+   if (mousePressed && mouseButton == RIGHTBUTTON){
+     if(mouseX>105 &&mouseX<225)
+       if(mouseY>135 && mouseY<185)
+     {animate (SETIN);
+     }}}
+
+void SETIN(){
+  animate(PAG3);
+}
+void PAG3() { 
+  background(0,0,0);
+  TEXTPAG3();
+  image("https://github.com/tonitonito123321/Descubre-la-programacion/blob/main/JUEGO/IMAGENES/Captura%20de%20pantalla%202024-10-23%20125338.png?raw=true", 102,10, 150,50);
+ if (keyPressed && key=="F"){
+    animate(BUTTY);
+  }}
+
+void TEXTPAG3	(){
+   fill(255,255,255);
+  text("ALANTE---> W ", 100,100);
+  
+  text("DERECHA---> D ", 100,150);
+  
+  text("IZQUIERDA---> A ", 100,200);
+  
+  text("ATRAS---> S ",100,250);
 }
