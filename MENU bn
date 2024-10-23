@@ -6,39 +6,42 @@ void BUTTY () {
    if (mousePressed && mouseButton == RIGHTBUTTON){
      if(mouseX>105 &&mouseX<225)
        if(mouseY>71 && mouseY<120)
-     {animate (BOTON);
+     {animate (PAG2);
      }}}
 
-void BOTON(){
-  animate(PAG2);
-} 
+void main () {
+  animate(anim);
+}
 
 void anim(){
   menuPrincipal();
   BUTTY(); 
   CONTROLB1();
   CONTROLB2();
-  
-}
-void main () {
-    
-  animate(anim);
+  CONTROLB3(); 
 }
  
+void menuPrincipal(){
+  NOMBRE();
+  image("https://img.freepik.com/fotos-premium/sala-television-arte-pixeles-casa-antigua-fondo-muebles-antiguos-estilo-retro-juego-8-bits-ai_985124-2146.jpg", 0, 0, 319,319);
+  image("https://github.com/tonitonito123321/Descubre-la-programacion/blob/main/JUEGO/IMAGENES/Captura%20de%20pantalla%202024-10-23%20184921.png?raw=true", 102,70, 120,50);
+  image("https://github.com/tonitonito123321/Descubre-la-programacion/blob/main/JUEGO/IMAGENES/setin.png?raw=true", 102,135, 120,50);
+  image("https://github.com/tonitonito123321/Descubre-la-programacion/blob/main/JUEGO/IMAGENES/Captura%20de%20pantalla%202024-10-23%20184749.png?raw=true", 102,200, 120,50);
+}
+
 void PAG2() { 
+  NOMBRE();
   background(0,44,255);
   image("https://steamuserimages-a.akamaihd.net/ugc/999144021176676023/3829BCBD323454FB733291CEF92E2485E5A714A4/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false", 1, 1, 318, 318);
- if (keyPressed && key=="F"){
-    animate(BUTTY);
-  } 
-}
+  image("https://github.com/tonitonito123321/Descubre-la-programacion/blob/main/JUEGO/IMAGENES/Captura%20de%20pantalla%202024-10-23%20125338.png?raw=true", 1, 268, 120, 50);
+   }
 
-void menuPrincipal(){
-  image("https://img.freepik.com/fotos-premium/sala-television-arte-pixeles-casa-antigua-fondo-muebles-antiguos-estilo-retro-juego-8-bits-ai_985124-2146.jpg", 0, 0, 319,319);
-  image("https://github.com/tonitonito123321/Descubre-la-programacion/blob/main/JUEGO/IMAGENES/www.png?raw=true", 102,70, 120,50);
- image("https://github.com/tonitonito123321/Descubre-la-programacion/blob/main/JUEGO/IMAGENES/setin.png?raw=true", 102,135, 120,50);
-
-}
+void RETURN1 () {
+   if (mousePressed && mouseButton == LEFTBUTTON){
+     if(mouseX>1 &&mouseX<92)
+       if(mouseY>280 && mouseY<320)
+     {animate (menuPrincipal);
+     }}}
 
 void CONTROLB2 () {
    if (mousePressed && mouseButton == RIGHTBUTTON){
@@ -51,15 +54,14 @@ void SETIN(){
   animate(PAG3);
 }
 void PAG3() { 
-  background(0,0,0);
+  NOMBRE();
+  image("https://wallpapers.com/images/hd/fondode-tron-puvfi3njzqhwslvs.jpg", 1, 1, 318, 318);
   TEXTPAG3();
   image("https://github.com/tonitonito123321/Descubre-la-programacion/blob/main/JUEGO/IMAGENES/Captura%20de%20pantalla%202024-10-23%20125338.png?raw=true", 102,10, 150,50);
- if (keyPressed && key=="F"){
-    animate(BUTTY);
-  }}
+  }
 
 void TEXTPAG3	(){
-   fill(255,255,255);
+   fill(255,0,0);
   text("ALANTE---> W ", 100,100);
   
   text("DERECHA---> D ", 100,150);
@@ -67,4 +69,37 @@ void TEXTPAG3	(){
   text("IZQUIERDA---> A ", 100,200);
   
   text("ATRAS---> S ",100,250);
+}
+
+void CONTROLB3 () {
+   if (mousePressed && mouseButton == RIGHTBUTTON){
+     if(mouseX>105 &&mouseX<225)
+       if(mouseY>200 && mouseY<250)
+     {animate (AJUSTES);
+     }}}
+
+void AJUSTES(){
+  animate(PAG4);
+}
+void PAG4() { 
+  
+  image("https://media.istockphoto.com/id/1404826141/es/v%C3%ADdeo/volando-a-trav%C3%A9s-de-un-t%C3%BAnel-abstracto-en-un-fondo-de-estilo-retro-animaci%C3%B3n-en-bucle.jpg?s=640x640&k=20&c=7kFYNyDp6HxURlFOT2SKKbkHpIAfw4TqTNrtWjdL2UM=", 1, 1, 318, 318);
+  TEXTPAG4	();
+  image("https://github.com/tonitonito123321/Descubre-la-programacion/blob/main/JUEGO/IMAGENES/Captura%20de%20pantalla%202024-10-23%20125338.png?raw=true", 102,10, 150,50);
+  }
+
+void TEXTPAG4	(){
+   fill(255,0,0);
+  text("Mi nombre es Antonio Marín", 50,100);
+  
+  text("Este es el menu principal de mi juego", 5,150);
+  
+  text("Espero que lo disfruteis mucho!!", 35,200);
+  
+  text("¡¡SUERTEEEE!! ",100,250);
+}
+
+void NOMBRE	(){
+   fill(255,0,0);
+  text("TONY", 10, 10);
 }
