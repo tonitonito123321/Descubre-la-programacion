@@ -1,3 +1,7 @@
+//Recuerda utilizar correctamente los botones en la pantalla de inicio/menuPrincipal usando el boton
+//Derecho del raton para interactuar con los botones de este mismo inicio/menuPrincipal y el boton
+//Izquierdo para interactuar con el boton Exit de las Paginas/PAGS: 2, 3 y 4, ya dentro.
+
 String nombre;
 
 void BUTTY () {
@@ -50,6 +54,13 @@ void RETURN1 () {
      {animate (anim);
      }}}
 
+void RETURN2 () {
+   if (mousePressed && mouseButton == LEFTBUTTON){
+     if(mouseX>100 &&mouseX<255)
+       if(mouseY>16 && mouseY<62)
+     {animate (anim);
+     }}}
+
 void CONTROLB2 () {
    if (mousePressed && mouseButton == RIGHTBUTTON){
      if(mouseX>105 &&mouseX<225)
@@ -65,7 +76,7 @@ void PAG3() {
   image("https://wallpapers.com/images/hd/fondode-tron-puvfi3njzqhwslvs.jpg", 1, 1, 318, 318);
   TEXTPAG3();
   image("https://github.com/tonitonito123321/Descubre-la-programacion/blob/main/JUEGO/IMAGENES/Captura%20de%20pantalla%202024-10-23%20125338.png?raw=true", 102,10, 150,50);
-	RETURN1 ();  
+	RETURN2 ();
 }
 
 void TEXTPAG3	(){
@@ -94,7 +105,8 @@ void PAG4() {
   image("https://media.istockphoto.com/id/1404826141/es/v%C3%ADdeo/volando-a-trav%C3%A9s-de-un-t%C3%BAnel-abstracto-en-un-fondo-de-estilo-retro-animaci%C3%B3n-en-bucle.jpg?s=640x640&k=20&c=7kFYNyDp6HxURlFOT2SKKbkHpIAfw4TqTNrtWjdL2UM=", 1, 1, 318, 318);
   TEXTPAG4	();
   image("https://github.com/tonitonito123321/Descubre-la-programacion/blob/main/JUEGO/IMAGENES/Captura%20de%20pantalla%202024-10-23%20125338.png?raw=true", 102,10, 150,50);
-  }
+  RETURN2();
+}
 
 void TEXTPAG4	(){
    fill(255,0,0);
@@ -109,5 +121,5 @@ void TEXTPAG4	(){
 
 void NOMBRE	(){
    fill(255,0,0);
-  text(nombre, 10, 10);
+  text(nombre, 250, 290);
 }
