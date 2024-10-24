@@ -1,3 +1,5 @@
+String nombre;
+
 void BUTTY () {
   print ("X: " + mouseX);
   println(" Y: " + mouseY);
@@ -6,7 +8,8 @@ void BUTTY () {
    if (mousePressed && mouseButton == RIGHTBUTTON){
      if(mouseX>105 &&mouseX<225)
        if(mouseY>71 && mouseY<120)
-     {animate (PAG2);
+     {nombre = readString("Dime tu nombre");
+       animate (PAG2);
      }}}
 
 void main () {
@@ -28,7 +31,7 @@ void menuPrincipal(){
   image("https://github.com/tonitonito123321/Descubre-la-programacion/blob/main/JUEGO/IMAGENES/Captura%20de%20pantalla%202024-10-23%20184921.png?raw=true", 102,70, 120,50);
   image("https://github.com/tonitonito123321/Descubre-la-programacion/blob/main/JUEGO/IMAGENES/setin.png?raw=true", 102,135, 120,50);
   image("https://github.com/tonitonito123321/Descubre-la-programacion/blob/main/JUEGO/IMAGENES/Captura%20de%20pantalla%202024-10-23%20184749.png?raw=true", 102,200, 120,50);
-  NOMBRE();
+
 }
 
 void PAG2() { 
@@ -37,6 +40,7 @@ void PAG2() {
   image("https://steamuserimages-a.akamaihd.net/ugc/999144021176676023/3829BCBD323454FB733291CEF92E2485E5A714A4/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false", 1, 1, 318, 318);
   image("https://github.com/tonitonito123321/Descubre-la-programacion/blob/main/JUEGO/IMAGENES/Captura%20de%20pantalla%202024-10-23%20125338.png?raw=true", 1, 268, 120, 50);
   RETURN1 ();
+    NOMBRE();
    }
 
 void RETURN1 () {
@@ -105,5 +109,5 @@ void TEXTPAG4	(){
 
 void NOMBRE	(){
    fill(255,0,0);
-  text("TONY", 10, 10);
+  text(nombre, 10, 10);
 }
