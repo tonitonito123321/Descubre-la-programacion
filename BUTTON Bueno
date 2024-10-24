@@ -4,8 +4,8 @@ void BUTTY () {
 }
  void CONTROL () {
    if (mousePressed && mouseButton == RIGHTBUTTON){
-     if(mouseX>105 &&mouseX<225)
-       if(mouseY>71 && mouseY<120)
+     if(mouseX>90 &&mouseX<227)
+       if(mouseY>125 && mouseY<173)
        animate (PAG2);
      }}
 void anim(){
