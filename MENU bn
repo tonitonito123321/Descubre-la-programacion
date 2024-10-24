@@ -19,14 +19,16 @@ void anim(){
   CONTROLB1();
   CONTROLB2();
   CONTROLB3(); 
+  
 }
  
 void menuPrincipal(){
-  NOMBRE();
+  
   image("https://img.freepik.com/fotos-premium/sala-television-arte-pixeles-casa-antigua-fondo-muebles-antiguos-estilo-retro-juego-8-bits-ai_985124-2146.jpg", 0, 0, 319,319);
   image("https://github.com/tonitonito123321/Descubre-la-programacion/blob/main/JUEGO/IMAGENES/Captura%20de%20pantalla%202024-10-23%20184921.png?raw=true", 102,70, 120,50);
   image("https://github.com/tonitonito123321/Descubre-la-programacion/blob/main/JUEGO/IMAGENES/setin.png?raw=true", 102,135, 120,50);
   image("https://github.com/tonitonito123321/Descubre-la-programacion/blob/main/JUEGO/IMAGENES/Captura%20de%20pantalla%202024-10-23%20184749.png?raw=true", 102,200, 120,50);
+  NOMBRE();
 }
 
 void PAG2() { 
@@ -34,13 +36,14 @@ void PAG2() {
   background(0,44,255);
   image("https://steamuserimages-a.akamaihd.net/ugc/999144021176676023/3829BCBD323454FB733291CEF92E2485E5A714A4/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false", 1, 1, 318, 318);
   image("https://github.com/tonitonito123321/Descubre-la-programacion/blob/main/JUEGO/IMAGENES/Captura%20de%20pantalla%202024-10-23%20125338.png?raw=true", 1, 268, 120, 50);
+  RETURN1 ();
    }
 
 void RETURN1 () {
    if (mousePressed && mouseButton == LEFTBUTTON){
      if(mouseX>1 &&mouseX<92)
        if(mouseY>280 && mouseY<320)
-     {animate (menuPrincipal);
+     {animate (anim);
      }}}
 
 void CONTROLB2 () {
@@ -58,7 +61,8 @@ void PAG3() {
   image("https://wallpapers.com/images/hd/fondode-tron-puvfi3njzqhwslvs.jpg", 1, 1, 318, 318);
   TEXTPAG3();
   image("https://github.com/tonitonito123321/Descubre-la-programacion/blob/main/JUEGO/IMAGENES/Captura%20de%20pantalla%202024-10-23%20125338.png?raw=true", 102,10, 150,50);
-  }
+	RETURN1 ();  
+}
 
 void TEXTPAG3	(){
    fill(255,0,0);
