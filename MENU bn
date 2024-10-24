@@ -42,7 +42,7 @@ void PAG2() {
   NOMBRE();
   background(0,44,255);
   image("https://steamuserimages-a.akamaihd.net/ugc/999144021176676023/3829BCBD323454FB733291CEF92E2485E5A714A4/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false", 1, 1, 318, 318);
-  image("https://github.com/tonitonito123321/Descubre-la-programacion/blob/main/JUEGO/IMAGENES/Captura%20de%20pantalla%202024-10-23%20125338.png?raw=true", 1, 268, 120, 50);
+  image("https://github.com/tonitonito123321/Descubre-la-programacion/blob/main/JUEGO/Captura%20de%20pantalla%202024-10-24%20163532.png?raw=true", 1, 268, 120, 50);
   RETURN1 ();
     NOMBRE();
    }
@@ -75,7 +75,7 @@ void PAG3() {
   NOMBRE();
   image("https://wallpapers.com/images/hd/fondode-tron-puvfi3njzqhwslvs.jpg", 1, 1, 318, 318);
   TEXTPAG3();
-  image("https://github.com/tonitonito123321/Descubre-la-programacion/blob/main/JUEGO/IMAGENES/Captura%20de%20pantalla%202024-10-23%20125338.png?raw=true", 102,10, 150,50);
+  image("https://github.com/tonitonito123321/Descubre-la-programacion/blob/main/JUEGO/Captura%20de%20pantalla%202024-10-24%20163532.png?raw=true", 102,10, 150,50);
 	RETURN2 ();
 }
 
@@ -104,7 +104,7 @@ void PAG4() {
   
   image("https://media.istockphoto.com/id/1404826141/es/v%C3%ADdeo/volando-a-trav%C3%A9s-de-un-t%C3%BAnel-abstracto-en-un-fondo-de-estilo-retro-animaci%C3%B3n-en-bucle.jpg?s=640x640&k=20&c=7kFYNyDp6HxURlFOT2SKKbkHpIAfw4TqTNrtWjdL2UM=", 1, 1, 318, 318);
   TEXTPAG4	();
-  image("https://github.com/tonitonito123321/Descubre-la-programacion/blob/main/JUEGO/IMAGENES/Captura%20de%20pantalla%202024-10-23%20125338.png?raw=true", 102,10, 150,50);
+  image("https://github.com/tonitonito123321/Descubre-la-programacion/blob/main/JUEGO/Captura%20de%20pantalla%202024-10-24%20163532.png?raw=true", 102,10, 150,50);
   RETURN2();
 }
 
