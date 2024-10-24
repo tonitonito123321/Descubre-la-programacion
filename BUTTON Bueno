@@ -3,11 +3,11 @@ void BUTTY () {
   println(" Y: " + mouseY);
 }
  void CONTROL () {
-   if (mousePressed || mouseButton == RIGHTBUTTON)
-     ellipse(mouseX, mouseY, 50,50);
-   animate (BOTON);
-   
- }
+   if (mousePressed && mouseButton == RIGHTBUTTON){
+     if(mouseX>105 &&mouseX<225)
+       if(mouseY>71 && mouseY<120)
+       animate (PAG2);
+     }}
 void anim(){
   BUTTY(); 
   CONTROL();
@@ -17,17 +17,10 @@ void main () {
   animate(anim);
 }
 void BOTON(){
-   background(0,44,255);
-  //RECTANGULO
-   image("https://www.shutterstock.com/image-vector/retro-arcade-game-machine-screen-600nw-1167058228.jpg", 1, 1, 318, 318);
-  image("https://github.com/tonitonito123321/Descubre-la-programacion/blob/main/JUEGO/IMAGENES/BUTON.png?raw=true", 99, 120, 135, 55);
-  if (mousePressed);
-  animate(PAG2);
+  image("https://www.shutterstock.com/image-vector/retro-arcade-game-machine-screen-600nw-1167058228.jpg", 1, 1, 318, 318);
+  image("https://github.com/tonitonito123321/Descubre-la-programacion/blob/main/JUEGO/IMAGENES/Captura%20de%20pantalla%202024-10-23%20184921.png?raw=true", 87, 120, 140, 55);
 } 
 void PAG2() { 
   background(0,44,255);
   image("https://steamuserimages-a.akamaihd.net/ugc/999144021176676023/3829BCBD323454FB733291CEF92E2485E5A714A4/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false", 1, 1, 318, 318);
-  if (keyPressed && key=="F"){
-    animate(BUTTY);
   }
-}
