@@ -1,0 +1,277 @@
+//Recuerda utilizar correctamente los botones en la pantalla de inicio/menuPrincipal usando el boton
+//Derecho del raton para interactuar con los botones de este mismo inicio/menuPrincipal y el boton
+//Izquierdo para interactuar con el boton Exit de las Paginas /PAGS: 2, 3 y 4, ya dentro.
+//Ya en el juego dependiendo de como le de la bala al enemigo sumaras mas o menos puntos y ademas,
+//si tardas mas de medio minuto (30 segundos) perderas y tras estosto podras volver a la pagina 
+//principla del menu y tendras que volver a empezar. Finalmente si consigues llegar
+//a la cantidad de 10 puntyos ganaras la partida. En caso de ganar tambien tendras un boton para
+//volver a la pagina principla del menu y tendras que volver a empezar.
+
+String nombre;
+int UWU = millis()/1000;
+
+//Control de el boton "START"
+void CONTROLB1 () {
+   if (mousePressed && mouseButton == RIGHTBUTTON){
+     if(mouseX>105 &&mouseX<225)
+       if(mouseY>71 && mouseY<120)
+     {nombre = readString("Dime tu nombre");
+       animate (PAG2);
+     }}}
+
+//Animador 
+void main () {
+  animate(anim);
+}
+
+//Animador de funciones
+void anim(){
+  menuPrincipal();
+  CONTROLB1();
+  CONTROLB2();
+  CONTROLB3(); 
+}
+
+//Pagina principal
+void menuPrincipal(){
+  
+  image("https://img.freepik.com/fotos-premium/sala-television-arte-pixeles-casa-antigua-fondo-muebles-antiguos-estilo-retro-juego-8-bits-ai_985124-2146.jpg", 0, 0, 319,319);
+  image("https://github.com/tonitonito123321/Descubre-la-programacion/blob/main/JUEGO/IMAGENES/Captura%20de%20pantalla%202024-10-23%20184921.png?raw=true", 102,70, 120,50);
+  image("https://github.com/tonitonito123321/Descubre-la-programacion/blob/main/JUEGO/IMAGENES/setin.png?raw=true", 102,135, 120,50);
+  image("https://github.com/tonitonito123321/Descubre-la-programacion/blob/main/JUEGO/IMAGENES/Captura%20de%20pantalla%202024-10-23%20184749.png?raw=true", 102,200, 120,50);
+
+}
+
+//Pagina 2
+void PAG2() { 
+  background(0,44,255);
+  image("https://steamuserimages-a.akamaihd.net/ugc/999144021176676023/3829BCBD323454FB733291CEF92E2485E5A714A4/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false", 1, 1, 318, 318);
+  image("https://github.com/tonitonito123321/Descubre-la-programacion/blob/main/JUEGO/IMAGENES/Captura%20de%20pantalla%202024-10-23%20125338.png?raw=true", 1, 270, 120, 50);
+  RETURN1 ();
+  TEXTPAG2();
+  NOMBRE();
+  dibuja();  
+  LOSE();
+}
+
+//Texto Pagina 2
+void TEXTPAG2	(){
+   fill(185,0,255);
+  text("PUNTOS:" + puntos, 1,20);
+  
+}
+
+//Control para el click izquierdo pa volver de la Pagina 2
+void RETURN1 () {
+   if (mousePressed && mouseButton == LEFTBUTTON){
+     if(mouseX>1 &&mouseX<92)
+       if(mouseY>280 && mouseY<320)
+     {animate (anim);
+     }}}
+
+//Control para la tecla "EXIT" pa volver de la Pagina 2
+void RETURN2 () {
+   if (mousePressed && mouseButton == LEFTBUTTON){
+     if(mouseX>100 &&mouseX<255)
+       if(mouseY>16 && mouseY<62)
+     {animate (anim);
+     }}}
+
+//Comtrol para el Boton "SETTING" que te lleva a la Pagina 3
+void CONTROLB2 () {
+   if (mousePressed && mouseButton == RIGHTBUTTON){
+     if(mouseX>105 &&mouseX<225)
+       if(mouseY>135 && mouseY<185)
+     {animate (SETIN);
+     }}}
+
+//Animar Pagina 3
+void SETIN(){
+  animate(PAG3);
+}
+
+//Pagina 3
+void PAG3() { 
+  NOMBRE();
+  image("https://wallpapers.com/images/hd/fondode-tron-puvfi3njzqhwslvs.jpg", 1, 1, 318, 318);
+  TEXTPAG3();
+  image("https://github.com/tonitonito123321/Descubre-la-programacion/blob/main/JUEGO/IMAGENES/Captura%20de%20pantalla%202024-10-23%20125338.png?raw=true", 102,10, 150,50);
+	RETURN2 ();
+}
+
+//Texto Pagina 3
+void TEXTPAG3	(){
+   fill(255,0,0);
+  text("Click Izquierdo Disparar", 67,100);
+  
+  text("Click Derecho Disparar", 70,150);
+  
+  text("Mouse hacia la Derecha --> Derecha ", 5,200);
+  
+  text("Mouse hacia la Izquierda --> Izquierda",1,250);
+}
+
+//Control Para el boton Exit de la Pagina 4
+void CONTROLB3 () {
+   if (mousePressed && mouseButton == RIGHTBUTTON){
+     if(mouseX>105 &&mouseX<225)
+       if(mouseY>200 && mouseY<250)
+     {animate (AJUSTES);
+     }}}
+
+//Animar Pagina 4
+void AJUSTES(){
+  animate(PAG4);
+}
+
+//Pagina 4
+void PAG4() { 
+  image("https://media.istockphoto.com/id/1404826141/es/v%C3%ADdeo/volando-a-trav%C3%A9s-de-un-t%C3%BAnel-abstracto-en-un-fondo-de-estilo-retro-animaci%C3%B3n-en-bucle.jpg?s=640x640&k=20&c=7kFYNyDp6HxURlFOT2SKKbkHpIAfw4TqTNrtWjdL2UM=", 1, 1, 318, 318);
+  TEXTPAG4	();
+  image("https://github.com/tonitonito123321/Descubre-la-programacion/blob/main/JUEGO/IMAGENES/Captura%20de%20pantalla%202024-10-23%20125338.png?raw=true", 102,10, 150,50);
+  RETURN2();
+}
+
+//Textos Pagina 4
+void TEXTPAG4	(){
+   fill(28,255,0);
+  text("Mi nombre es Antonio Marín", 50,100);
+  
+  text("Este es el menu principal de mi juego", 5,150);
+  
+  text("Espero que lo disfruteis mucho!!", 35,200);
+  
+  text("¡¡SUERTEEEE!! ",100,250);
+}
+
+//Nombre en la esquina de abajo en el Juego
+void NOMBRE	(){
+   fill(255,0,241);
+  text(nombre, 200, 300);
+}
+
+
+
+double x = 0;
+double y = 230;
+double v = 0;
+boolean disparando = false;
+// Plano enemigo
+int xEnemigo = 160;
+int yEnemigo = 50;
+int vEnemigo = 3;
+//Creo la figura del enemigo
+void enemigo (int x, int y) {
+  noStroke ();
+  strokeWeight (1);
+  //Alas
+  fill(0,0,0);
+  rect (x-10,y-2,20,4);
+  //Cuerpo
+  fill(124,0,255);
+  rect (x-3,y-5,6,10);
+  //Alerones
+  stroke(124,0,255);
+  line (x-10, y-8, x-10,y+8);
+  line (x+10,y-8, x+10,y+8);
+}
+//Creo la nave
+void nave (double x, double y, double escala) {
+  int grosorAleron = round (2*escala);
+  //Ala 
+  noStroke ();
+  fill(255,255,255);
+  rect (x-20*escala, y, 40*escala, 10*escala);
+  //Cuerpo
+  fill(0,0,0);
+  noStroke ();
+  ellipse (x,y, 10*escala,40*escala);
+  //Laterales
+  ellipse (x-20*escala, y+5*escala, 5*escala, 20*escala);
+  ellipse (x+20*escala, y+5*escala, 5*escala, 20*escala);
+  //Alerón
+  stroke(255,255,255);
+  strokeWeight (grosorAleron);
+  line (x,y+5*escala, x,y+15*escala);
+}
+//Fondo 
+void dibuja () {
+  if (mousePressed)  {
+    x = mouseX;
+    y = 230;
+    v = -3;
+   disparando = true;
+  }
+ //Disparando al enemigo y funciones de los puntos aplicados
+  y = y + v;
+  xEnemigo = xEnemigo + vEnemigo;
+  if (xEnemigo > 300 || xEnemigo < 20) {
+    vEnemigo = vEnemigo * -1;
+  }
+  if (xEnemigo-10 < x && xEnemigo+10 > x &&
+      yEnemigo-8 < y && yEnemigo+8 > y) {
+    ellipse (xEnemigo, yEnemigo, 50,50);
+    puntos=puntos+1;
+  }
+  if(puntos== 10){
+   animate(WIN);
+  }
+  if (disparando) {
+    noStroke ();
+    fill(16,0,255);
+    ellipse (x,y, 3,10);
+  }
+  nave (mouseX, 250,1);
+  enemigo (xEnemigo, yEnemigo);
+}
+
+//Puntos
+fill(88,0,255);
+  int puntos=0;
+
+//Perder la partida
+void LOSE(){
+  int a = UWU - millis()/1000;
+  println (a);
+  if(a<=-30){
+    UWU=millis()/1000;
+    a = UWU - millis()/1000;
+    animate(GAMEOVER);}}
+
+//Imagenes de perder la partida
+void GAMEOVER(){
+    background(76,253,0);
+  fill(0,0,0,1);
+  image("https://i.ytimg.com/vi/br3OzOrARh4/maxresdefault.jpg",0,0,320,320);
+  image("https://github.com/tonitonito123321/Descubre-la-programacion/blob/main/JUEGO/IMAGENES/Captura%20de%20pantalla%202024-10-23%20125338.png?raw=true", 0, 270, 120, 50);
+  RETURN4 ();
+  }
+
+//Control para el click izquierdo pa volver de la Pagina 1 tras perder
+void RETURN4 () {
+   if (mousePressed && mouseButton == LEFTBUTTON){
+     if(mouseX>1 &&mouseX<92)
+       if(mouseY>280 && mouseY<320)
+     {puntos=0;
+       animate (anim);
+     }}}
+
+//Ganar la partida
+void WIN (){
+  background(0,237,255);
+  fill(0,116,255);
+  image("https://github.com/tonitonito123321/Descubre-la-programacion/blob/main/JUEGO/image.png?raw=true",0,0,320,320);
+  image("https://github.com/tonitonito123321/Descubre-la-programacion/blob/main/JUEGO/IMAGENES/Captura%20de%20pantalla%202024-10-23%20125338.png?raw=true", 0, 280, 120, 40);
+  y = 0;
+  x = 0;
+  RETURN5 ();
+}
+
+//Control para el click izquierdo pa volver de la Pagina 1 tras ganar
+void RETURN5 () {
+   if (mousePressed && mouseButton == LEFTBUTTON){
+     if(mouseX>1 &&mouseX<92)
+       if(mouseY>280 && mouseY<320)
+     {puntos=0;
+       animate (anim);
+     }}}
